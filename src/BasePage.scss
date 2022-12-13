@@ -1,0 +1,18 @@
+$color-orange-yellow: #ffc40c;
+$color-orange: #ff850c;
+$color-orange-light: #f9a44f;
+$color-orange-dark: #c06408;
+$color-yellow: #fbef63;
+
+#logo {
+    height: 100px;
+    margin-left: 10px;
+    float: left;
+}
+.base {
+    &__header {
+        height: 30%;
+        color: $color-orange;
+        font: normal normal bold 105px/165px Inter;
+    }
+}
