@@ -3,16 +3,79 @@ $color-orange: #ff850c;
 $color-orange-light: #f9a44f;
 $color-orange-dark: #c06408;
 $color-yellow: #fbef63;
+$color-yellow-mute: #787443;
+$color-sandy-brown: #d689488a;
 
 #logo {
     height: 100px;
-    margin-left: 10px;
+    width: 150px;
+    margin: 10px 20px;
     float: left;
 }
 .base {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+
     &__header {
+        padding-left: 15%;
+        margin:0;
+
+        top:0;
+        left:0;
         height: 30%;
+        width: 100%;
         color: $color-orange;
         font: normal normal bold 105px/165px Inter;
     }
+    .body {
+        position:fixed;
+        top: 30%;
+        height: 70%;
+        width: -webkit-fill-available;
+        background: rgba(214, 137, 72, 0.5411764706);
+        padding: 5%;
+        background: $color-sandy-brown;
+        .clue {
+            padding: 10% 5%;
+            .question {
+                color: $color-orange-dark;
+                font: normal normal bold 35px/55px Inter;
+            }
+        }
+        .button {
+            height: 50px; 
+            display: inline-block;
+            padding: 30px 15px;
+            font-size: 45px;
+            line-height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            cursor: pointer;
+            height: 30px;
+            background-color: $color-yellow;
+            border: 1px solid $color-orange-dark;
+            -webkit-border-radius: 14px;
+            &__hidden {
+                cursor: pointer;
+                background-color: $color-yellow-mute;
+            }
+        }
+        .button.next {
+            float: right;
+            margin-right: 100px;
+        }
+        .button.prev {
+            float: left;
+            margin-left: 100px;
+        }
+    }
 }
+
